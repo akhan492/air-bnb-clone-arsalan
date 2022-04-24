@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header__section {
+  width: 100vw;
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: black;
+}
+.logo {
+  cursor: pointer;
+  margin-left: 20px;
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo img {
+  padding: 0 40px;
+  height: 40px;
+  color: #fafafc;
+  transition: color 0.2s;
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.user,
+.profile,
+.logo,
+.globe,
+nav {
+  display: flex;
+  align-items: center;
+}
+.user {
+  background: #fafafc;
+  border-radius: 40px;
+  height: 38px;
+  width: 70px;
+
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  cursor: pointer;
+}
+.userIcon {
+  background: #2e2e48;
+  border-radius: 99px;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #fafafc;
+}
+.menu {
+  color: #2e2e48 !important;
+  margin-right: 0.5rem;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-wrap: wrap;
+  padding: 0 40px;
+}
+.profile a:hover {
+  color: white;
+  background-color: #2e2e48;
+  border-radius: 50px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.profile svg {
+  height: 1.15rem;
+  margin: 0 0.5rem;
+}
+.profile svg {
+  color: #fafafc;
+}
+a {
+  color: #fafafc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+/* nav a:hover{
+  color:gray;
+}
+ */
+a {
+  position: relative;
+}
+a::before {
+  position: absolute;
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: gray;
+  bottom: -0.5rem;
+  left: calc(35% - 0.75rem);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s;
+}
+a:hover {
+  color: #2e2e48;
+}
+a:hover::before,
+a.active::before {
+  transform: scaleX(1);
+}
+@media screen and (max-width: 600px) {
+  .header__section {
+   display: none;
+  }
+}
