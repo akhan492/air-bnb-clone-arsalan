@@ -26,7 +26,9 @@ export default function App() {
       <Router>
         {scroll ? <SearchBar /> : <Header />}
         <Body/>
-          <h1 style={{padding : "40px" , margin : "40x"}}>Inspiration for your next trip</h1>
+          <div className="heading" style={{margin :"50px", padding : "50px"}}>
+          <h1 >Inspiration for your next trip</h1>
+          </div>
         <div className="card">
         <Card  city={"Mussoorie"} url={"https://a0.muscache.com/im/pictures/aef20929-0d6a-40e7-8ac9-321ff0edf8c9.jpg?im_w=240"} Kilomiter={223} bgClr={"#cc2d4a"}/>
         <Card  city={"Manali"} url={"https://a0.muscache.com/im/pictures/73250991-433e-4950-b7d1-59bba711bb57.jpg?im_w=240"} Kilomiter={405} bgClr={"#bc1a6e"}/>
