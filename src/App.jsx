@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
+import Swing from 'react-reveal/Swing';
+import Slide from 'react-reveal/Slide';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SearchBar from "./components/SearchBar";
 import Card from "./components/Card";
@@ -26,9 +28,13 @@ export default function App() {
       <Router>
         {scroll ? <SearchBar /> : <Header />}
         <Body/>
+        <Swing>
           <div className="heading" style={{margin :"50px", padding : "50px"}}>
           <h1 >Inspiration for your next trip</h1>
           </div>
+          </Swing>
+          <Slide left>
+
         <div className="card">
         <Card  city={"Mussoorie"} url={"https://a0.muscache.com/im/pictures/aef20929-0d6a-40e7-8ac9-321ff0edf8c9.jpg?im_w=240"} Kilomiter={223} bgClr={"#cc2d4a"}/>
         <Card  city={"Manali"} url={"https://a0.muscache.com/im/pictures/73250991-433e-4950-b7d1-59bba711bb57.jpg?im_w=240"} Kilomiter={405} bgClr={"#bc1a6e"}/>
@@ -37,8 +43,8 @@ export default function App() {
 
         <Card city={"Haldwani"} url={"https://a0.muscache.com/im/pictures/68ef0c20-321d-42c0-beb4-13bce3e258a2.jpg?im_w=240"} Kilomiter={235} bgClr={"#d93b30"}/>
 
-
         </div>
+        </Slide>
         <Footer/>
       </Router>
 
